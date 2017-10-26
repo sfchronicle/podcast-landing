@@ -1,0 +1,103 @@
+<!-- build:remove -->
+<%= t.include("partials/_top.html") %>
+<!-- /build -->
+<!-- build:css inline -->
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- /build -->
+
+<script type="text/javascript" src="http://embed-v4.spokenlayer.com/v4/spokenlayer.js"></script>
+
+<!-- Code that goes within WCM Freeform -->
+<div id="podcasts">
+
+	<div class="header">
+		<h1>Podcasts</h1>
+		<div id="spokenlayer-audio-player-container"></div>
+	</div>
+
+	<div class="podcast">
+		<div class="logo">
+			<img src="./assets/ae.jpg">
+		</div>
+		<div class="info">
+			<div class="title">Arts & Entertaiment</div>
+			<div class="description">The San Francisco Chronicle SpokenEdition podcast is the acknowledged authority on arts and entertainment in the Bay Area. Our nationally recognized critics and staff writers put their deep knowledge and critical acumen to work every day to help readers make informed choices about how to negotiate the area’s rich array of cultural offerings. Whether it’s a long-established arts organization or an all-but-unknown project that’s just getting off the ground, The Chronicle’s readers know about it first from us.</div>
+			<hr>
+			<div id="links">
+				<span>iTunes</span>|<span>Google Play Music</span>|<span>Overcast</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="podcast">
+		<div class="logo">
+			<img src="./assets/bayarea.jpg">
+		</div>
+		<div class="info">
+			<div class="title">Bay Area News</div>
+			<div class="description">The San Francisco Chronicle Bay Area News SpokenEdition podcast provides an authoritative voice that lends context and depth to the conflicts and changes that shape the region. Our  coverage aims to make readers feel smarter about the important issues of the day. Beats are covered through the prisms of change, conflict and power, without losing sight of the quirky and eclectic stories that make the Bay Area unique.</div>
+			<hr>
+			<div id="links">
+				<span>iTunes</span>|<span>Google Play Music</span>|<span>Overcast</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="podcast">
+		<div class="logo">
+			<img src="./assets/biztech.jpg">
+		</div>
+		<div class="info">
+			<div class="title">Business & Technology</div>
+			<div class="description">The San Francisco Chronicle Business SpokenEdition podcast covers the Bay Area economy through explanatory storytelling with a critical perspective so readers can always find out what they need to know. We cover the influencers and those whom who they influence — and how one group affects the other. Through this, we chronicle the changing region.</div>
+			<hr>
+			<div id="links">
+				<span>iTunes</span>|<span>Google Play Music</span>|<span>Overcast</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="podcast">
+		<div class="logo">
+			<img src="./assets/sports.jpg">
+		</div>
+		<div class="info">
+			<div class="title">Sports</div>
+			<div class="description">The San Francisco Chronicle Sports SpokenEdition podcast covers the country’s most vibrant sports market, telling the story of the Bay Area’s teams and athletes, both on and off the field. We satisfy the hard-core sports fan, but extend our reach to the general reader with stories that examine the cultural zeitgeist surrounding sports. Our coverage surprises with unique takes on common refrains and provocative stories that influence or inspire the sporting world.</div>
+			<hr>
+			<div id="links">
+				<span>iTunes</span>|<span>Google Play Music</span>|<span>Overcast</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="podcast">
+		<div class="logo">
+			<img src="./assets/food_home.jpg">
+		</div>
+		<div class="info">
+			<div class="title">Food & Home</div>
+			<div class="description">The San Francisco Chronicle SpokenEdition podcast owns lifestyle coverage in the Bay Area, focusing on trends in style, food, wine/spirits, design and travel. Every day we publish fresh storytelling and service journalism that resonates with our unique Northern Californian culture. Our coverage ranges from rich entertainment and insight, along with access to the region’s influential and creative people and institutions. It’s high-end fashion, society events, Michael Bauer’s restaurant reviews, wine recommendations, and great trend reporting on food and drink.</div>
+			<hr>
+			<div id="links">
+				<span>iTunes</span>|<span>Google Play Music</span>|<span>Overcast</span>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script id="sl-player-init">
+	var SpokenLayer = window.SpokenLayer || function(){};
+	new SpokenLayer({
+		'player-config-key':'398f7763-e355-4d77-8eb8-adb3bf95cf6e ',
+		'publication-id':' 879b9e47-24d2-4328-b69d-c252c5c77d7b '
+	});
+	SpokenLayer.loadPodcast('http://api.spokenlayer.com/feed/channel/v1-sfchronicle-all-ext/fcee86637c47ec0a46ae31dfe733ae5686c1caa1ee578387743c2b70629ff133');
+</script>
+
+
+<!-- build:remove -->
+<%= t.include("partials/_bottom.html") %>
+<!-- /build -->
+
