@@ -1,6 +1,7 @@
 node_modules
 build
 temp
+data
 auth.json
 .DS_Store
 npm-debug.log
