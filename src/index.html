@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <!-- /build -->
 
-<script type="text/javascript" src="http://embed-v4.spokenlayer.com/v4/spokenlayer.js"></script>
 
 <!-- Code that goes within WCM Freeform -->
 <div id="podcasts">
@@ -17,7 +16,6 @@
 			<div class="logo"><a href="https://www.sfsymphony.org/" target="_blank"><img src="http://projects.sfchronicle.com/2017/embed-podcasts/img/sfs.jpg"></a></div>
 		</div>
 		<div class="subhead">We’re transforming written articles into audio read aloud that you can listen to anytime, anywhere. Listen on the go, during your daily commute, or at the gym! Scroll down for links to subscribe using your favorite podcast application.</div>
-		<div id="spokenlayer-audio-player-container"></div>
 	</div>
 
 
@@ -25,7 +23,7 @@
 
 	<div class="podcast">
 		<div class="logo">
-			<img src="http://projects.sfchronicle.com/2017/embed-podcasts/img/<%= p.img %>.jpg">
+			<img src="//projects.sfchronicle.com/2017/embed-podcasts/img/<%= p.img %>.jpg?">
 		</div>
 		<div class="info">
 			<div class="title"><%= p.show %></div>
@@ -33,12 +31,12 @@
 			<hr>
 			<div id="links">
 				<span>LISTEN ON: </span>
-				<span><a href="<%= p.itunes %>">iTunes</a></span>
-				<span><a href="<%= p.spotify %>">Spotify</a></span>
-				<span><a href="<%= p.overcast %>">Overcast</a></span>
-				<span><a href="<%= p.google %>">Google Play</a></span>
-				<span><a href="<%= p.stitcher %>">Stitcher</a></span>
-				<span><a href="<%= p.iheart %>">iHeartRadio</a></span>
+				<% if(p.itunes){ %><span><a href="<%= p.itunes %>">iTunes</a></span><%}%>
+				<% if(p.spotify){ %><span><a href="<%= p.spotify %>">Spotify</a></span><%}%>
+				<% if(p.overcast){ %><span><a href="<%= p.overcast %>">Overcast</a></span><%}%>
+				<% if(p.google){ %><span><a href="<%= p.google %>">Google Play</a></span><%}%>
+				<% if(p.stitcher){ %><span><a href="<%= p.stitcher %>">Stitcher</a></span><%}%>
+				<% if(p.iheart){ %><span><a href="<%= p.iheart %>">iHeartRadio</a></span><%}%>
 			</div>
 		</div>
 	</div>
@@ -48,15 +46,6 @@
 	
 
 </div>
-
-<script id="sl-player-init">
-	var SpokenLayer = window.SpokenLayer || function(){};
-	new SpokenLayer({
-		'player-config-key':'398f7763-e355-4d77-8eb8-adb3bf95cf6e ',
-		'publication-id':' 879b9e47-24d2-4328-b69d-c252c5c77d7b '
-	});
-	SpokenLayer.loadPodcast('http://api.spokenlayer.com/feed/channel/v1-sfchronicle-all-ext/fcee86637c47ec0a46ae31dfe733ae5686c1caa1ee578387743c2b70629ff133');
-</script>
 
 
 <!-- build:remove -->
