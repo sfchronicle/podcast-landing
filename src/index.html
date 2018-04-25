@@ -18,12 +18,16 @@
 		<div class="subhead">We’re transforming written articles into audio read aloud that you can listen to anytime, anywhere. Listen on the go, during your daily commute, or at the gym! Scroll down for links to subscribe using your favorite podcast application.</div>
 	</div>
 
+	<div id="show-player">
+		<script src="//projects.sfchronicle.com/shared/js/responsive-frame.js"></script><iframe is="responsive-iframe" interval="0" src="//projects.sfchronicle.com/tools/podcast-embed/player.html?landing=true"></iframe>
+	</div>
+
 
 	<% json.Sheet1.forEach(function(p) { %>
 
 	<div class="podcast">
 		<div class="logo">
-			<img src="//projects.sfchronicle.com/2017/embed-podcasts/img/<%= p.img %>.jpg?">
+			<img src="/assets/<%= p.img %>.jpg?">
 		</div>
 		<div class="info">
 			<div class="title"><%= p.show %></div>
@@ -51,4 +55,5 @@
 <!-- build:remove -->
 <%= t.include("partials/_bottom.html") %>
 <!-- /build -->
+<script src="app.js" async></script>
 
