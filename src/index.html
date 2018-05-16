@@ -25,14 +25,14 @@
 
 	<% json.Sheet1.forEach(function(p) { %>
 
-	<div class="podcast">
+	<div class="podcast" id="<%= p.libsyn_id %>">
 		<div class="logo">
-			<img src="/assets/<%= p.img %>.jpg?">
+			<img src="/assets/<%= p.img %>.jpg">
 		</div>
 		<div class="info">
 			<div class="title"><%= p.show %></div>
 			<div class="description"><%= p.description %></div>
-			<hr>
+			<hr class="hidden-mobile">
 			<div id="links">
 				<span>LISTEN ON: </span>
 				<% if(p.itunes){ %><span><a href="<%= p.itunes %>">iTunes</a></span><%}%>
@@ -43,6 +43,7 @@
 				<% if(p.iheart){ %><span><a href="<%= p.iheart %>">iHeartRadio</a></span><%}%>
 			</div>
 		</div>
+		<div class="episodes"></div>
 	</div>
 
 	<% }); %>
