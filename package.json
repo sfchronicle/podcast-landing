@@ -32,7 +32,8 @@
     "resolve": "^1.1.7",
     "shelljs": "^0.6.0",
     "through2": "^2.0.0",
-    "typogr": "^0.6.4"
+    "typogr": "^0.6.4",
+    "write": "^2.0.0"
   },
   "browser": {
     "share": "./src/js/lib/share.min.js",
@@ -46,5 +47,9 @@
       "./tasks/lib/browserify-less",
       "./tasks/lib/browserify-text"
     ]
+  },
+  "scripts": {
+    "auth": "tasks/googleauth.js",
+    "sheets": "tasks/google-sheets.js"
   }
 }
