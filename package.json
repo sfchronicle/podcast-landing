@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "archieml": "^0.3.1",
-    "async": "^2.2.0",
+    "async": "^2.6.4",
     "babel-core": "^6.26.3",
     "babelify": "^8.0.0",
     "browserify": "^13.0.0",
